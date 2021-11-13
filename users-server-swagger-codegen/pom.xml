@@ -24,7 +24,7 @@
         <dependency>
             <groupId>io.swagger.core.v3</groupId>
             <artifactId>swagger-annotations</artifactId>
-            <version>2.1.10</version>
+            <version>2.1.11</version>
         </dependency>
 
         <dependency>
@@ -71,7 +71,7 @@
         </dependency>
 
         <!-- For generateSupportingFiles -->
-
+<!--
         <dependency>
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
@@ -107,7 +107,7 @@
             <artifactId>spring-boot-autoconfigure</artifactId>
             <version>2.5.3</version>
         </dependency>
-
+-->
 <!--
 
         <dependency>
@@ -150,7 +150,6 @@
             <plugin>
                 <groupId>io.swagger.codegen.v3</groupId>
                 <artifactId>swagger-codegen-maven-plugin</artifactId>
-                <version>3.0.26</version>
                 <executions>
                     <execution>
                         <id>generate-swagger</id>
@@ -159,11 +158,11 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <inputSpec>${project.build.directory}/swagger/users-api/de/serdioa/swagger/users/users.yaml</inputSpec>
+                            <inputSpec>${project.build.directory}/swagger/users-api/de/serdioa/swagger/sample/sample.yaml</inputSpec>
                             <language>spring</language>
-                            <modelPackage>de.serdioa.swagger.users.model</modelPackage>
-                            <apiPackage>de.serdioa.swagger.users.api</apiPackage>
-                            <invokerPackage>de.serdioa.swagger.users.invoker</invokerPackage>
+                            <modelPackage>de.serdioa.swagger.sample.model</modelPackage>
+                            <apiPackage>de.serdioa.swagger.sample.api</apiPackage>
+                            <invokerPackage>de.serdioa.swagger.sample.invoker</invokerPackage>
 
                             <generateApis>true</generateApis>
                             <generateModels>true</generateModels>
@@ -178,9 +177,15 @@
                             <!--
                             <output>${project.build.directory}/swagger/users-api/generated-sources</output>
                             -->
+                            
+                            <!--
+                            <configHelp>true</configHelp>
+                            -->
+                            
                             <configOptions>
-                                <dateLibrary>java11</dateLibrary>
+                                <dateLibrary>java8</dateLibrary>
                                 <java11>true</java11>
+                                <useTags>true</useTags>
                             </configOptions>
                         </configuration>
                     </execution>
