@@ -126,7 +126,7 @@
                 <executions>
                     <execution>
                         <id>unpack-swagger-api</id>
-                        <phase>generate-resources</phase>
+                        <phase>generate-sources</phase>
                         <goals>
                             <goal>unpack</goal>
                         </goals>
@@ -153,7 +153,7 @@
                 <executions>
                     <execution>
                         <id>generate-swagger</id>
-                        <phase>generate-resources</phase>
+                        <phase>generate-sources</phase>
                         <goals>
                             <goal>generate</goal>
                         </goals>
