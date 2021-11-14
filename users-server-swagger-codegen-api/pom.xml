@@ -8,11 +8,11 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>users-server-swagger-codegen</artifactId>
+    <artifactId>users-server-swagger-codegen-api</artifactId>
     <packaging>jar</packaging>
 
-    <name>Users Server (swagger-codegen)</name>
-    <description>Server library (swagger-codegen)</description>
+    <name>Users Server API (swagger-codegen)</name>
+    <description>Server Library API (swagger-codegen)</description>
 
     <dependencies>
         <dependency>
