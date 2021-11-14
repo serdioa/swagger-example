@@ -68,6 +68,7 @@
         <module>users-server-openapi-codegen</module>
         <module>users-server-openapi-codegen-api</module>
         <module>users-server-openapi-impl</module>
+        <module>users-server-swagger-codegen</module>
         <module>users-server-swagger-codegen-api</module>
         <module>users-server-swagger-impl</module>
     </modules>
