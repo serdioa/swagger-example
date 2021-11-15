@@ -13,6 +13,8 @@ import de.serdioa.swagger.sample.model.Pong;
 @Service
 public class PingApiDelegateImpl implements PingApiDelegate {
   private static final String DEFAULT_TOKEN = "pong";
+  private static final String TRIGGER_EXCEPTION_TOKEN = "exception";
+  private static final int MAX_TOKEN_LENGTH = 16;
 
   // Thread-local proxy, specific to the request being processed.
   private final NativeWebRequest request;
@@ -37,7 +39,11 @@ public class PingApiDelegateImpl implements PingApiDelegate {
   public ResponseEntity<Pong> restV1PingPost(final String token) {
     System.out.println("!!! PingApiDelegateImpl::post()");
 
-    if(token != null && token.length() > 16) {
+    if(token.equals(TRIGGER_EXCEPTION_TOKEN)) {
+      throw new RuntimeException("Test runtime exception");
+    }
+
+    if(token != null && token.length() > MAX_TOKEN_LENGTH) {
       return ResponseEntity.badRequest().build();
     }
 

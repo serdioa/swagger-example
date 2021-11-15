@@ -8,11 +8,11 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>users-server-openapi-codegen-api</artifactId>
+    <artifactId>users-server-openapi-codegen-api-delegate</artifactId>
     <packaging>jar</packaging>
 
-    <name>Users Server API (openapi-codegen)</name>
-    <description>Server Library API (openapi-codegen)</description>
+    <name>Users Server API (openapi-codegen delegate)</name>
+    <description>Server Library API (openapi-codegen delegate)</description>
 
     <properties>
         <jackson.version>2.13.0</jackson.version>
@@ -149,6 +149,7 @@
                                 <dateLibrary>java8</dateLibrary>
                                 <java8>true</java8>
                                 <useTags>true</useTags>
+                                <delegatePattern>true</delegatePattern>
                             </configOptions>
                         </configuration>
                     </execution>

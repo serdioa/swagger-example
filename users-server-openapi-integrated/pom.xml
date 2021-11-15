@@ -24,7 +24,7 @@
 
         <dependency>
             <groupId>de.serdioa.swagger</groupId>
-            <artifactId>users-server-openapi-codegen-api</artifactId>
+            <artifactId>users-server-openapi-codegen-api-delegate</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
