@@ -126,12 +126,12 @@
                             <modelPackage>de.serdioa.swagger.sample.model</modelPackage>
                             <apiPackage>de.serdioa.swagger.sample.api</apiPackage>
                             <invokerPackage>de.serdioa.swagger.sample.invoker</invokerPackage>
-
+<!--
                             <generateApis>true</generateApis>
                             <generateModels>true</generateModels>
                             <generateSupportingFiles>true</generateSupportingFiles>
                             <supportingFilesToGenerate>ApiUtil.java</supportingFilesToGenerate>
-
+-->
                             <!--
                             <<generateApiTests>false</generateApiTests>
                             <generateApiDocumentation>false</generateApiDocumentation>
@@ -146,12 +146,10 @@
                             <configHelp>true</configHelp>
                             -->
                             <configOptions>
-                                <!--
-                                <apiFirst>true</apiFirst>
-                                -->
                                 <dateLibrary>java8</dateLibrary>
                                 <java8>true</java8>
                                 <useTags>true</useTags>
+                                <delegatePattern>true</delegatePattern>
                             </configOptions>
                         </configuration>
                     </execution>
