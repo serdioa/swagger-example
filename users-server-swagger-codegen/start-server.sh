@@ -1,6 +1,8 @@
 #!/bin/bash
 
-JAR=$(/bin/find target -name users-server-swagger-impl-*.jar)
+# mvn package spring-boot:repackage
+
+JAR=$(/bin/find target -name users-server-swagger-codegen-*.jar)
 if [[ -z "${JAR}" ]] ; then
     echo "Can not find executable jar" >&2
 else

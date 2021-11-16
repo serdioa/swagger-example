@@ -1,5 +1,6 @@
 package de.serdioa.swagger.rest.controller;
 
+import java.time.LocalDate;
 import java.time.OffsetDateTime;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,7 @@ public class PingApiDelegateImpl implements PingApiDelegate {
     final Pong pong = new Pong();
     pong.setToken(DEFAULT_TOKEN);
     pong.setTimestamp(OffsetDateTime.now());
+    pong.setDt(LocalDate.now());
 
     return ResponseEntity.ok(pong);
   }
@@ -50,6 +52,7 @@ public class PingApiDelegateImpl implements PingApiDelegate {
     final Pong pong = new Pong();
     pong.setToken(token != null ? token : DEFAULT_TOKEN);
     pong.setTimestamp(OffsetDateTime.now());
+    pong.setDt(LocalDate.now());
 
     return ResponseEntity.ok(pong);
   }

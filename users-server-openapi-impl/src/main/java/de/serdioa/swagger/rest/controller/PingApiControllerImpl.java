@@ -1,5 +1,6 @@
 package de.serdioa.swagger.rest.controller;
 
+import java.time.LocalDate;
 import java.time.OffsetDateTime;
 
 import de.serdioa.swagger.sample.api.PingApiController;
@@ -28,6 +29,7 @@ public class PingApiControllerImpl extends PingApiController {
         Pong pong = new Pong();
         pong.setToken(DEFAULT_TOKEN);
         pong.setTimestamp(OffsetDateTime.now());
+        pong.setDt(LocalDate.now());
 
         return ResponseEntity.ok(pong);
     }
@@ -44,6 +46,7 @@ public class PingApiControllerImpl extends PingApiController {
         Pong pong = new Pong();
         pong.setToken(token != null ? token : DEFAULT_TOKEN);
         pong.setTimestamp(OffsetDateTime.now());
+        pong.setDt(LocalDate.now());
 
         return ResponseEntity.ok(pong);
     }
