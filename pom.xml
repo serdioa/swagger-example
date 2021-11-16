@@ -72,6 +72,7 @@
         <module>users-server-swagger-codegen</module>
         <module>users-server-swagger-codegen-api</module>
         <module>users-server-swagger-impl</module>
+        <module>users-server-swagger-integrated</module>
     </modules>
 
     <properties>
