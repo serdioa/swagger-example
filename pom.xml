@@ -67,10 +67,12 @@
         <module>users-api</module>
         <module>users-server-openapi-codegen</module>
         <module>users-server-openapi-codegen-api</module>
+        <module>users-server-openapi-codegen-api-delegate</module>
         <module>users-server-openapi-impl</module>
         <module>users-server-openapi-integrated</module>
         <module>users-server-swagger-codegen</module>
         <module>users-server-swagger-codegen-api</module>
+        <module>users-server-swagger-codegen-api-delegate</module>
         <module>users-server-swagger-impl</module>
         <module>users-server-swagger-integrated</module>
     </modules>

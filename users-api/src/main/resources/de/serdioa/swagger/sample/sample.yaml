@@ -58,3 +58,9 @@ components:
           type: string
           example: "pong"
           description: "Ping token"
+        token_type:
+          type: string
+          description: Response token type
+          enum:
+            - automatic
+            - provided

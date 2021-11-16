@@ -48,6 +48,7 @@ public class PingApiDelegateImpl implements PingApiDelegate {
     pong.setToken(DEFAULT_TOKEN);
     pong.setTimestamp(OffsetDateTime.now());
     pong.setDt(LocalDate.now());
+    pong.setTokenType(Pong.TokenTypeEnum.AUTOMATIC);
 
     return ResponseEntity.ok(pong);
   }
@@ -56,7 +57,7 @@ public class PingApiDelegateImpl implements PingApiDelegate {
   public ResponseEntity<Pong> restV1PingPost(final String token) {
     System.out.println("!!! PingApiDelegateImpl::post()");
 
-    if(token.equals(TRIGGER_EXCEPTION_TOKEN)) {
+    if(TRIGGER_EXCEPTION_TOKEN.equals(token)) {
       throw new RuntimeException("Test runtime exception");
     }
 
@@ -68,6 +69,7 @@ public class PingApiDelegateImpl implements PingApiDelegate {
     pong.setToken(token != null ? token : DEFAULT_TOKEN);
     pong.setTimestamp(OffsetDateTime.now());
     pong.setDt(LocalDate.now());
+    pong.setTokenType(token != null ? Pong.TokenTypeEnum.PROVIDED : Pong.TokenTypeEnum.AUTOMATIC);
 
     return ResponseEntity.ok(pong);
   }
