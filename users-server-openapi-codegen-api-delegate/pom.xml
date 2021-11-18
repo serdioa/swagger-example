@@ -15,49 +15,42 @@
     <description>Server Library API (openapi-codegen delegate)</description>
 
     <properties>
-        <jackson.version>2.13.0</jackson.version>
-        <spring.boot.version>2.5.6</spring.boot.version>
-        <springfox.swagger.version>2.9.2</springfox.swagger.version>
+        <jackson.version>2.12.3</jackson.version>
+        <spring.boot.version>2.4.1</spring.boot.version>
+        <spring.version>5.3.2</spring.version>
+        <springfox.swagger.version>3.0.0</springfox.swagger.version>
     </properties>
 
     <dependencies>
+
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <version>${spring.boot.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-tomcat</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jetty</artifactId>
-            <version>${spring.boot.version}</version>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>1.6.3</version>
         </dependency>
 
         <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>${springfox.swagger.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>${springfox.swagger.version}</version>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>com.fasterxml.jackson.datatype</groupId>
-            <artifactId>jackson-datatype-jsr310</artifactId>
-            <version>${jackson.version}</version>
+            <groupId>javax.annotation</groupId>
+            <artifactId>javax.annotation-api</artifactId>
+            <version>1.3.2</version>
         </dependency>
+
         <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>${jackson.version}</version>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>2.0.1.Final</version>
         </dependency>
 
         <dependency>
@@ -67,15 +60,9 @@
         </dependency>
 
         <dependency>
-            <groupId>javax.validation</groupId>
-            <artifactId>validation-api</artifactId>
-            <version>2.0.0.Final</version>
-        </dependency>
-
-        <dependency>
-            <groupId>javax.annotation</groupId>
-            <artifactId>javax.annotation-api</artifactId>
-            <version>1.3.2</version>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
         </dependency>
 
     </dependencies>
@@ -126,6 +113,9 @@
                             <modelPackage>de.serdioa.swagger.sample.model</modelPackage>
                             <apiPackage>de.serdioa.swagger.sample.api</apiPackage>
                             <invokerPackage>de.serdioa.swagger.sample.invoker</invokerPackage>
+
+                            <supportingFilesToGenerate>ApiUtil.java,RFC3339DateFormat.java</supportingFilesToGenerate> 
+
 <!--
                             <generateApis>true</generateApis>
                             <generateModels>true</generateModels>

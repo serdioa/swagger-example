@@ -15,9 +15,9 @@
     <description>REST Server implementation and Swagger (openapi-codegen)</description>
 
     <properties>
-        <jackson.version>2.13.0</jackson.version>
-        <spring.boot.version>2.5.6</spring.boot.version>
-        <springfox.swagger.version>2.9.2</springfox.swagger.version>
+        <jackson.version>2.12.3</jackson.version>
+        <spring.boot.version>2.4.1</spring.boot.version>
+        <springfox.swagger.version>3.0.0</springfox.swagger.version>
     </properties>
 
     <dependencies>
@@ -44,6 +44,23 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jetty</artifactId>
             <version>${spring.boot.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+            <version>${springfox.swagger.version}</version>
         </dependency>
 
     </dependencies>
